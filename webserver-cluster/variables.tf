@@ -10,20 +10,10 @@ variable "cluster_name" {
   default     = "webservers-test"
 }
 
-# variable "alb_name" {
-#   description = "The name of the ALB"
-#   type        = string
-#   default     = "webservers-lb"
-# }
+variable network_cidr {
+  default = "10.0.0.0/16"
+}
 
-# variable "instance_security_group_name" {
-#   description = "The name of the security group for the EC2 Instances"
-#   type        = string
-#   default     = "webservers-instance"
-# }
-
-# variable "alb_security_group_name" {
-#   description = "The name of the security group for the ALB"
-#   type        = string
-#   default     = "webservers-alb"
-# }
+variable availability_zones {
+  default = ["us-east-1a", "us-east-1b"]
+}
